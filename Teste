@@ -1,0 +1,39 @@
+#criando o data frame para a análise de regressao linear
+
+dados <- data.frame(x = c(1.4,1.5,1.7,1.9,2.1,2.2,2.4,3.2,3.7,4.2,4.8,5.2),
+	y = c(6.5,5.8,7.8,8.1,10.4,12.3,13.1,17.4,20.1,24.5,25.5,27.1))
+
+> dados
+
+  x    y
+1.4  6.5
+1.5  5.8
+1.7  7.8
+1.9  8.1
+2.1 10.4
+2.2 12.3
+2.4 13.1
+3.2 17.4
+3.7 20.1
+4.2 24.5
+4.8 25.5
+5.2 27.1
+
+
+
+# Criaçao do modelo lm para regressao linear
+
+modelo.regressao <- lm(y ~ x, data= dados) # implementando o modelo
+
+# Usando a funçao summary para visualizar o resultado do modelo
+
+summary(modelo.regressao) # para estimar os parâmetros
+
+# Resultado do summary
+
+Call:
+lm(formula = y ~ x, data = dados)
+
+# Anova para gerar a tabela de variância
+
+anova(modelo.regressao) # tabela do anova
